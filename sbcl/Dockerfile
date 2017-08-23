@@ -42,8 +42,8 @@ RUN    echo "==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> "          \
     && apt-get -y autoclean                                             \
     && apt-get -y clean                                                 \
     && echo "==> Remove temporary directory ..."                        \
-    && rm -rfv ${TMP_DIR}                                               \
-    && rm -rfv /var/lib/apt/lists/*                                     \
+    && rm -rf ${TMP_DIR}                                                \
+    && rm -rf /var/lib/apt/lists/*                                      \
     && echo "==> Add a standard user ..."                               \
     && addgroup --gid 1000 stdusr                                       \
     && useradd --create-home --shell /bin/bash                          \

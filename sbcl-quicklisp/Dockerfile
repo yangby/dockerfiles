@@ -35,13 +35,13 @@ RUN    echo "==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> "          \
         --eval "(ql:update-client)"                                     \
         --eval "(ql-util:without-prompting (ql:update-all-dists))"      \
     && echo "==> Remove temporary directory and files ..."              \
-    && rm -rfv ${TMP_DIR} ${GNUPGHOME}                                  \
-    && find "${INSTALL_DIR}/" -name "*.fasl" -exec rm -v {} \;          \
+    && rm -rf ${TMP_DIR} ${GNUPGHOME}                                   \
+    && find "${INSTALL_DIR}/" -name "*.fasl" -exec rm {} \;             \
     && echo "==> Remove unnessary packages in runtime ..."              \
     && sudo apt-get -y remove --purge                                   \
         openssl curl ca-certificates gnupg                              \
     && sudo apt-get -y autoremove --purge                               \
     && sudo apt-get -y autoclean                                        \
     && sudo apt-get -y clean                                            \
-    && sudo rm -rfv /var/lib/apt/lists/*                                \
+    && sudo rm -rf /var/lib/apt/lists/*                                 \
     && echo "==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> "

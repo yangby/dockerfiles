@@ -16,7 +16,7 @@ RUN    echo "==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> "          \
     && apt-get -y autoclean                                             \
     && apt-get -y clean                                                 \
     && echo "==> Remove temporary files ..."                            \
-    && rm -rfv /var/lib/apt/lists/*                                     \
+    && rm -rf /var/lib/apt/lists/*                                      \
     && echo "==> Add a standard user ..."                               \
     && addgroup --gid 1000 stdusr                                       \
     && useradd --uid 1000 --gid 1000 stdusr                             \

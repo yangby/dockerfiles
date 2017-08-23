@@ -34,7 +34,7 @@ RUN    echo "==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> "          \
     && sudo apt-get -y autoremove --purge                               \
     && sudo apt-get -y autoclean                                        \
     && sudo apt-get -y clean                                            \
-    && sudo rm -rfv /var/lib/apt/lists/*                                \
+    && sudo rm -rf /var/lib/apt/lists/*                                 \
     && echo "==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> "
 
 COPY webapp /mnt/work
