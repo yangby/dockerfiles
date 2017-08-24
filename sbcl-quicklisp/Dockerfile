@@ -34,7 +34,7 @@ RUN    echo "==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> "          \
     && sbcl --noinform --noprint --non-interactive                      \
         --eval "(ql:update-client)"                                     \
         --eval "(ql-util:without-prompting (ql:update-all-dists))"      \
-    && echo "==> Remove temporary directory and files ..."              \
+    && echo "==> Remove temporary directories and files ..."            \
     && rm -rf ${TMP_DIR} ${GNUPGHOME}                                   \
     && find "${INSTALL_DIR}/" -name "*.fasl" -exec rm {} \;             \
     && echo "==> Remove unnessary packages in runtime ..."              \

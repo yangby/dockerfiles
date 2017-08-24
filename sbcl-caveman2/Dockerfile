@@ -9,7 +9,7 @@ RUN    echo "==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> "          \
     && sudo apt-get -y upgrade                                          \
     && sudo apt-get -y install                                          \
         --no-install-recommends --no-install-suggests                   \
-        build-essential gcc libev4                                      \
+        build-essential libev4                                          \
     && echo "==> Set environment variables ..."                         \
     && INSTALL_DIR=${HOME}/quicklisp                                    \
     && echo "==> Installing Lisp Libraries ..."                         \

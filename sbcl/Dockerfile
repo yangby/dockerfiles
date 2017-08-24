@@ -25,7 +25,7 @@ RUN    echo "==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> "          \
     && apt-get -y install                                               \
         --no-install-recommends --no-install-suggests                   \
         sudo openssl curl make bzip2 ca-certificates                    \
-    && echo "==> Create a temporary directory ..."                      \
+    && echo "==> Create temporary directories ..."                      \
     && mkdir ${TMP_DIR}/pkgs                                            \
     && curl -L -o "${TMP_DIR}/pkgs/${SBCL_FILE}"                        \
         "${SBCL_URL}"                                                   \
@@ -41,7 +41,7 @@ RUN    echo "==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> "          \
     && apt-get -y autoremove --purge                                    \
     && apt-get -y autoclean                                             \
     && apt-get -y clean                                                 \
-    && echo "==> Remove temporary directory ..."                        \
+    && echo "==> Remove temporary directories ..."                      \
     && rm -rf ${TMP_DIR}                                                \
     && rm -rf /var/lib/apt/lists/*                                      \
     && echo "==> Add a standard user ..."                               \

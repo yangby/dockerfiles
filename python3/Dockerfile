@@ -33,7 +33,7 @@ RUN    echo "==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> "          \
         libbz2-1.0 liblzma5    zlib1g                                   \
         tcl8.6-dev tk8.6-dev libreadline-dev                            \
         libtcl8.6  libtk8.6  libreadline7                               \
-    && echo "==> Create a temporary directory ..."                      \
+    && echo "==> Create temporary directories ..."                      \
     && mkdir ${TMP_DIR}/pkgs                                            \
     && echo "==> Install Python ..."                                    \
     && curl -L -o "${TMP_DIR}/pkgs/${PYTHON_FILE}"                      \
