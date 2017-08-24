@@ -2,6 +2,8 @@ FROM debian:testing-slim
 
 LABEL maintainer YangBy <yby@yangby.org>
 
+ENV PATH "/opt/bin:${PATH}"
+
 RUN    echo "==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> "          \
     && echo "==> Configure PYTHON ..."                                  \
     && PYTHON_VER=3.6.2                                                 \

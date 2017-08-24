@@ -1,4 +1,4 @@
-FROM yangby/sbcl:1.3.20
+FROM yangby/sbcl:latest
 
 LABEL maintainer YangBy <yby@yangby.org>
 
